@@ -4,50 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FK Mini Website</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f0f4f8;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            background: #123b70;
+            color: white;
+            padding: 25px 20px;
             text-align: center;
-            padding: 50px 20px;
+        }
+
+        nav {
+            background: #0b2748;
+            padding: 14px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 20px;
         }
 
         .kad {
             background: white;
-            max-width: 500px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px #00000010;
         }
 
-        h1 {
+        h2 {
             color: #174ea6;
         }
 
         button {
             background: #174ea6;
             color: white;
-            border: none;
             padding: 12px 20px;
+            border: 0;
             border-radius: 8px;
             cursor: pointer;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 22px;
+            background: #123b70;
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="kad">
-        <h1>Selamat Datang!</h1>
+    <header>
+        <h1>FK Mini Website</h1>
+        <p>Belajar membina website dengan GitHub</p>
+    </header>
 
-        <p>Ini website pertama saya menggunakan GitHub.</p>
+    <nav>
+        <a href="#utama">Utama</a>
+        <a href="#tentang">Tentang</a>
+    </nav>
 
-        <p>Belajar membina web, satu langkah pada satu masa.</p>
+    <main>
+        <section class="kad" id="utama">
+            <h2>Selamat Datang!</h2>
 
-        <button onclick="alert('Tahniah! Website pertama berjaya!')">
-            Klik Saya
-        </button>
-    </div>
+            <p>
+                Ini ialah projek latihan website pertama saya.
+                Saya sedang belajar HTML, CSS dan GitHub.
+            </p>
+
+            <button onclick="ucapan()">
+                Klik Saya
+            </button>
+
+            <p id="mesej"></p>
+        </section>
+
+        <section class="kad" id="tentang"
+                 style="margin-top: 20px;">
+            <h2>Tentang Projek</h2>
+
+            <p>
+                Projek ini dibina untuk mempelajari cara
+                membina, mengemas kini dan menerbitkan website.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>FK Mini Website | Projek Pembelajaran 2026</p>
+    </footer>
+
+    <script>
+        function ucapan() {
+            document.getElementById("mesej").textContent =
+                "Tahniah! Ko sudah berjaya mengemas kini website!";
+        }
+    </script>
 </body>
 </html>
